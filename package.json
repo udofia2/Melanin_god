@@ -1,8 +1,8 @@
 {
   "name": "core",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "user permission and Role management system",
+  "author": "Abasiodiong Udofia",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

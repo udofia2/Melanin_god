@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UseGuards, UsePipes } from '@nestjs/common';
+import { Controller, Post, Body, UseGuards, UsePipes, HttpCode } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from '../users/dto/create-user.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
@@ -20,7 +20,7 @@ import { AssignRoleDto } from './dto/assign-role.dto';
 import { RegisterResponseDto } from './dto/register-response.dto';
 import { LoginResponseDto } from './dto/login-response.dto';
 import { AssignRoleResponseDto } from './dto/assign-role-response.dto';
-import { UserResponseDto } from 'src/users/dto/response-user.dto';
+import { UserResponseDto } from '../users/dto/response-user.dto';
 
 @ApiTags('Auth')
 @Controller('auth')
@@ -66,6 +66,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @HttpCode(200)
   @UsePipes(ValidationPipe)
   @ApiOperation({
     summary: 'Authenticate a user and return a JWT token.',

@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Get, Param, UsePipes } from '@nestjs/common';
 import { PermissionsService } from './permissions.service';
 import { CreatePermissionDto } from './dto/create-permission.dto';
-import { ValidationPipe } from 'src/common/pipes/validation.pipe';
+import { ValidationPipe } from '../common/pipes/validation.pipe';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AssignPermissionDto } from './dto/asign-permission-dto'
 
