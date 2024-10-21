@@ -20,13 +20,13 @@ export class AuthService {
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
     }
-    const isPasswordValid = await bcrypt.compare(password, user.passwordHash); // Compare hashed password
+    const isPasswordValid = await bcrypt.compare(password, user.passwordHash); 
     if (!isPasswordValid) {
       throw new UnauthorizedException('Invalid credentials');
     }
-    const payload = { email: user.email, sub: user.id }; // Create JWT payload
+    const payload = { email: user.email, sub: user.id }; 
     return {
-      access_token: this.jwtService.sign(payload), // Sign the token
+      access_token: this.jwtService.sign(payload),
     };
   }
 }

@@ -8,13 +8,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new HttpExceptionFilter());
 
-  // Swagger configuration
   const config = new DocumentBuilder()
     .setTitle('User and Role Management API')
     .setDescription('API documentation for user and role management system')
     .setVersion('1.0')
     .addServer('http://localhost:3000/', 'Local environment')
-    .addServer('https://production.yourapi.com/', 'Production')
+    .addServer('https://melanin.onrender.com', 'Production')
     .addBearerAuth()
     .build();
 

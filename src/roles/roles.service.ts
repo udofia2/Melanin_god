@@ -7,7 +7,7 @@ export class RolesService {
   constructor(private readonly prisma: PrismaService) {}
 
   async createRole(createRoleDto: CreateRoleDto) {
-    // Check if all permission IDs exist
+    
     const permissions = await this.prisma.permission.findMany({
       where: {
         id: {
