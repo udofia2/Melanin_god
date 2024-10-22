@@ -3,6 +3,16 @@
 [Video Demo](https://www.youtube.com/watch?v=WDYDNU91T84) This is the direct link to the video demo.
 
 
+[Documentation](https://melanin-god.onrender.com/api) Link to the Documentation
+
+
+[Health Check](https://melanin-god.onrender.com) Link to check the health status of the server
+
+
+## Admin Login Credentials
+- email: Odiong@gmail.com
+- password: password123
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
