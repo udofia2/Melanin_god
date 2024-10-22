@@ -26,7 +26,10 @@
     "prisma:studio": "prisma studio",
     "db:reset": "prisma migrate reset --force",
     "swagger:generate": "nest build && swagger-jsdoc -d ./src/swaggerDef.js -o ./swagger.json",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+
+    "docker:up": "docker-compose up --build",
+    "docker:db:schema": "docker-compose exec app npx prisma migrate dev"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

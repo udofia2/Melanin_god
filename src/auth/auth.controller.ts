@@ -108,7 +108,7 @@ export class AuthController {
   @Roles('admin')
   @ApiBearerAuth()
   @ApiOperation({
-    summary: 'Assign a role to a user',
+    summary: 'Admin-only: Assign a role to a user',
     description: 'Endpoint for assigning roles to users by admin.',
   })
   @ApiResponse({
