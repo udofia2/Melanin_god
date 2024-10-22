@@ -10,7 +10,9 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('User and Role Management API')
-    .setDescription('API documentation for user and role management system. please do not forget to switch to prod server before you begin testing. [use this as admin password(email: Odiong@gmail.com, password: password123)]')
+    .setDescription(
+      'API documentation for user and role management system. please do not forget to switch to prod server before you begin testing. \n\n Please use this as admin login credentials \n\n <b>email: Odiong@gmail.com</b> \n\n <b>password: password123</b>',
+    )
     .setVersion('1.0')
     .addServer('http://localhost:3000/', 'Local environment')
     .addServer('https://melanin-god.onrender.com', 'Production')
